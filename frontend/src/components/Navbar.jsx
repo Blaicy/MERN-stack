@@ -11,7 +11,6 @@ const Navbar = () => {
         <div className='flex items-center justify-between'>
           <h1 className='font-bold text-3xl tracking-tighter'>ThinkBoard</h1>
           <Link to='/create' 
-          onClick={() => toast.success("Note created!")}
           className='btn btn-outline'>
           <Plus />New Note
           </Link>
