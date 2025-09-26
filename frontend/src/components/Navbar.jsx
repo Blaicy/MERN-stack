@@ -1,5 +1,4 @@
 import React from 'react'
-import toast from 'react-hot-toast'
 import { Link } from 'react-router-dom'
 import { Plus } from 'lucide-react'
 
@@ -22,3 +21,4 @@ const Navbar = () => {
 }
 
 export default Navbar
+

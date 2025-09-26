@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import toast from 'react-hot-toast'
-import Navbar from '../components/navbar'
+import Navbar from '../components/Navbar'
 import Limit from '../components/Limit'
 import NoteCard from '../components/NoteCard'
 import NotFound from '../components/NotFound'
