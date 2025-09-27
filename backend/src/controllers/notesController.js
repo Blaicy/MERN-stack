@@ -46,14 +46,17 @@ export async function updateNotes (req,res) {
       res.status(500).json({message:"Error updating a note"})
    }
 }
-export async function deleteNotes (req,res) {
-   try {
-      const {title,content} = req.body
-      const deletedNote = await Note.findByIdAndDelete(req.params.id, {title, content})
-      if(!deletedNote) return res.status(404).json({message:"Note not found"})
-      res.status(200).json({message:"Deleted successfully"})
-   } catch (error) {
-      console.error("Error in deleteNotes", error)
-      res.status(500).json({message:"Error deleting a note"})
-   }
+export async function deleteNotes(req, res) {
+  try {
+    const deletedNote = await Note.findByIdAndDelete(req.params.id);
+    
+    if (!deletedNote) {
+      return res.status(404).json({ message: "Note not found" });
+    }
+
+    res.status(200).json({ message: "Deleted successfully" });
+  } catch (error) {
+    console.error("Error in deleteNotes:", error);
+    res.status(500).json({ message: "Error deleting a note" });
+  }
 }

@@ -14,7 +14,7 @@ const NoteCard = ({note, setNotes}) => {
          setNotes((prev) => prev.filter(note => note._id !==id))
          toast.success("Deleted successfully 😊!")
       } catch (error) {
-         toast.error("Failed to delte note 😓!")
+         toast.error("Failed to delete note 😓!")
       }
    }
   return (
@@ -29,9 +29,9 @@ const NoteCard = ({note, setNotes}) => {
                <span className='text-sm text-base-content/60'>
                {formatDate(new Date(note.createdAt))}</span>
                <div className='flex items-center gap-1 '>
-                  <PenSquareIcon className='size-4'/>
+                  <PenSquareIcon className='size-5'/>
                   <button className='btn btn-ghost btn-xs text-error'>
-                  <Trash2Icon className='size-3' onClick={(e) => handleDelete(e,note._id)}/>
+                  <Trash2Icon className='size-5' onClick={(e) => handleDelete(e,note._id)}/>
                   </button>
                </div>
          </div>

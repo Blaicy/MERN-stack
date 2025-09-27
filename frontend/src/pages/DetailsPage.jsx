@@ -36,7 +36,7 @@ const DetailsPage = () => {
          toast.success("Deleted successfully 😊!")
          navigate("/")
       } catch (error) {
-         toast.error("Failed to delte note 😓!")
+         toast.error("Failed to delete note 😓!")
       }
   }
    const handleSave = async() => {
